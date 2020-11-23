@@ -1,93 +1,29 @@
-<!DOCTYPE>
-<html>
-<head>
-	<title>Projekt</title>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="utf-8">
-</head>
-<body>
-	<div id="container">
-		<div id="top">
-			<img src="logo.png" id="zdjecie">
-		</div>
-		<div id="left">
-			<h1>HTML</h1>
-			<p>HTML (ang. HyperText Markup Language) - kipertekstowy język znaczników, wykorzystywany do tworzenia dokumentów hipertekstowych</p>
-			
-			<h2>TABELA</h2>
-			<table>
-				<tr>
-					<td>tekst</td>
-					<td>tekst</td>
-					<td>tekst</td>
-					<td>tekst</td>
-				</tr>
-				<tr>
-					<td colspan="2"></td>
+<?php
+include('config/config.inc.php');
+include('script/header.php');
+?>
 
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td rowspan="2"></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					
-				</tr>
-			</table>
-			
-			<h4> ZNACZNIKI HTML5</h4>
-			
-			<ul>
-				<li>HEADER</li>
-				<li>ASIDE</li>
-				<li>SECTION</li>
-				<li>NAV</li>
-				<li>FOOTER</li>
-			</ul>
-		</div>
-		<div id="right">
-			<h3>FORMULARZ</h3>
-			<form action="test.php" method="post">
-				<input type="text" name="x" placeholder="Wpisz swoje imie...">
-				<input type="text" name="y" placeholder="Wpisz swoje nazwisko...">
-				<input type="submit" value="Wyslij">
-			</form>
-			
-			<h4>NOWOŚCI HTML5</h4>
-			<ol>
-				<li>POLA INPUT DO OBSŁUGI EMAIL</li>
-				<li>WSPARCIE AUDIO</li>
-				<li>CANVAS - WYŚWIETLANIE GRAFIKI</li>
-				<li>FORMULARZE - ATRYBUT REQUIRED</li>
-			</ol>
-			
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col-12 bg">
+            <img src="img/logo.png" class="mx-auto d-block w-25" alt="...">
+        </div>
+    </div>
+    <div class="row justify-content-md-center mt-3">
+        <div class="col-md-3 col-12">
+            <img src="img/obrazek2.jpg" class="mx-auto d-block w-75">
+        </div>
+        <div class="col-md-3 col-12">
+            <p class="text-justify font-italic p-3">
+                Nasza restauracja położona w samym centrum Raciborza to miejsce wyjątkowe, z niepowtarzalnym klimatem, w
+                którym czekają na Państwa wszystkie smaki słonecznej Italii - pizze, makarony, sałatki oraz wspaniałe
+                owoce morza. Dla smakoszy kuchni polskiej przygotowujemy także tradycyjne dania. Serwujemy doskonałe
+                włoskie wina, które zadowolą nawet najbardziej wyrafinowane podniebienia.
+            </p>
+        </div>
+    </div>
+</div>
 
-			
-			<canvas id="myCanvas"></canvas>
-			
-			<script>
-				var c = document.getElementById("myCanvas");
-				var ctx = c.getContext("2d");
-				ctx.beginPath();
-				ctx.arc(150, 75, 75, 0, 2 * Math.PI);
-				ctx.moveTo(0,0);
-				ctx.lineTo(300, 150);
-				ctx.moveTo(0,150);
-				ctx.lineTo(300, 0);
-				ctx.stroke();
-			</script>
-		</div>
-		
-		<div id="footer">
-			<marquee>ANIMACJA - PASEK Z TEKSTEM HTML</marquee>
-		</div>
-	</div>
-</body>
-</html>
+<?php
+include('script/footer.php');
+?>
